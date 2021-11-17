@@ -35,6 +35,7 @@
     width: 100%;
     transition: transform 0.5s linear, border 0.1s linear;
     border-top-right-radius: 50px;
+    border: 5px solid white;
   }
   .contenitore:hover {
       z-index: 5;
@@ -43,7 +44,7 @@
       -ms-transform: scale(1.5);
       -webkit-transform: scale(1.5);
       transform: scale(1.5);
-      border: 5px solid white;
+      
       z-index: 10;
       border-radius: 0;
   }
