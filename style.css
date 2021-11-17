@@ -42,6 +42,7 @@
     vertical-align: middle;
     width: 100%;
     transition: transform 0.5s linear;
+    border-top-right-radius: 50px;
   }
   
   .column img:hover {
