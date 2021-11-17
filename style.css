@@ -20,6 +20,15 @@
     padding: 0 4px;
   }
   
+  .img-magnifier-glass {
+    position: absolute;
+    border: 3px solid #000;
+    border-radius: 50%;
+    cursor: none;
+    /*Set the size of the magnifier glass:*/
+    width: 100px;
+    height: 100px;
+  }
   /* Create four equal columns that sits next to each other */
   .column {
     -ms-flex: 33%; /* IE10 */
@@ -32,8 +41,14 @@
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+    transition: transform 0.5s linear;
   }
   
+  .column img:hover {
+      -ms-transform: scale(1.5);
+      -webkit-transform: scale(1.5);
+      transform: scale(1.5);
+  }
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
     .column {
