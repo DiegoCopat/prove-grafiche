@@ -21,16 +21,6 @@
     flex-wrap: wrap;
     padding: 0 4px;
   }
-  
-  .img-magnifier-glass {
-    position: absolute;
-    border: 3px solid #000;
-    border-radius: 50%;
-    cursor: none;
-    /*Set the size of the magnifier glass:*/
-    width: 100px;
-    height: 100px;
-  }
   /* Create four equal columns that sits next to each other */
   .column {
     -ms-flex: 33%; /* IE10 */
@@ -45,14 +35,47 @@
     width: 100%;
     transition: transform 0.5s linear, border 0.1s linear;
     border-top-right-radius: 50px;
+    z-index: 1;
   }
   
-  .column img:hover {
+  .contenitore:hover img {
       -ms-transform: scale(1.5);
       -webkit-transform: scale(1.5);
       transform: scale(1.5);
       border: 5px solid white;
   }
+  .contenitore {
+      position: relative;
+  }
+  div.text-block {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        top: 5%;
+        right: 5%;
+        background-color: rgba(0,141,188, 0.8);
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        z-index: 5;
+        transition: opacity 0.3s linear, transform 0.3s linear;
+        opacity: 0;
+        
+  }
+  
+  .contenitore:hover .text-block{
+      opacity: 1;
+    transition: opacity 1s linear 0.6s;
+    -ms-transform: scale(1.5);
+      -webkit-transform: scale(1.5);
+      transform: scale(1.5);
+    
+}
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
     .column {
